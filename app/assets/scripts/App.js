@@ -1,0 +1,1 @@
+alert('Welcome to katbin entreprises (Pty.) Ltd.');
