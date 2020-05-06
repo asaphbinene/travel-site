@@ -4,7 +4,13 @@
  * The second line direct to the first instruction that need to be consider to run this project by webpack
  */
 const path = require('path')
- module.exports = {
+const katbinPCssPlgins = [
+    require('postcss-simple-vars'),
+    require('postcss-nested'),
+    require('autoprefixer')
+]
+
+module.exports = {
     entry: './app/assets/scripts/App.js',
     output: {
         /**
@@ -19,7 +25,7 @@ const path = require('path')
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
+            use: ['style-loader', 'css-loader', {loader: 'postcss-loader', options:{plugins: katbinPCssPlgins}}]
             }
         ]
     }
