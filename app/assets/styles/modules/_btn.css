@@ -1,0 +1,11 @@
+.btn {
+    background-color: $mainBlue;
+    color: #ffffff;
+    text-decoration: none;
+    padding: .80rem 1.1rem;
+    display: inline-block;
+
+    &--meroon {
+        background-color: $mainMeroon;
+    }
+}
