@@ -6,6 +6,7 @@
 const path = require('path')
 const katbinPCssPlgins = [
     require('postcss-import'),
+    require('postcss-mixins'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
     require('autoprefixer')
