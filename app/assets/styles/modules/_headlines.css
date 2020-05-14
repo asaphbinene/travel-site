@@ -1,4 +1,5 @@
 .headline {
+
     font-size: 1.9rem;
     font-weight: 200;
 
@@ -41,6 +42,10 @@
     
     strong {
         font-weight: 400;
+    }
+
+    &--no-t-margin {
+        margin-top: 0;
     }
 
 }

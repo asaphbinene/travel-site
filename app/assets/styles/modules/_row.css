@@ -1,24 +1,32 @@
 .row {
-    
+    //background-color: $mainMeroon;
     @mixin clearfix;
 
-    &--gutters {
-        padding-right: -60px;
-    } 
-
-    &--gutters > div {
-        padding-right: 60px;
-    }
-
     @mixin atMedium {
+        &--gutters {
+            padding-right: -60px;
+        } 
+    
+        &--gutters > div {
+            padding-right: 60px;
+        }
+
         &__medium-4 {
             float: left;
             width: 33.33%;
+        }
+
+        &__medium-4--larger {
+            width: 37%; 
         }
     
         &__medium-8 {
             float: left;
             width: 66.66%;
+        }
+
+        &__medium-8--smaller {
+            width: 63%;
         }
     }
 }
