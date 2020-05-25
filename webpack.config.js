@@ -9,6 +9,7 @@ const katbinPCssPlgins = [
     require('postcss-mixins'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
+    require('postcss-hexrgba'),
     require('autoprefixer')
 ]
 
