@@ -15,7 +15,7 @@
     <div class="wrapper">
       <div class="site-header__logo">
         <div class="site-header__logo__graphic icon icon--clear-view-escapes">
-          Clear View Escapes</div>
+         </div>
           <img src="assets/images/icons/clear-view-escapes.svg">
       </div>
       <div class="site-header__menu-icon">
@@ -27,17 +27,17 @@
         </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
-            <li><a href="#dev-portfolio">Katbin Development</a></li>
-            <li><a href="#it-consult">IT Consulation</a></li>
-            <li><a href="#katbin-news">features</a></li>
-            <li><a href="#katbin-us">About Us</a></li>
+            <li><a href="#dev-portfolio" id="dev-porfolio-link">Katbin Development</a></li>
+            <li><a href="#our-beginning" id="it-consult-link">IT Consulation</a></li>
+            <li><a href="#features" id="katbin-news-link">features</a></li>
+            <li><a href="#testimonial" id="about-katbin-link">About Us</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
 
-  <div class="large-hero">
+  <div id="dev-portfolio" class="large-hero" data-matching-link="#dev-portfolio">
     <picture>
       <source srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1200px)">
         <source srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w" media="(min-width: 920px)">
@@ -54,7 +54,7 @@
     </div>
   </div>
   
-  <div id="our-beginning" class="page-section">
+  <div id="our-beginning" class="page-section" data-matching-link="#it-consult-link">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--b-margin-small">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="headline headline--centered headline--otherblue headline--light headline--small headline--narrow headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
@@ -81,7 +81,7 @@
     </div>
   </div>
 
-  <div id="features" class="page-section page-section--blue">
+  <div id="features" class="page-section page-section--blue" data-matching-link="#katbin-news-link">
     <div class="wrapper">
       <h2 class="section-title"><img class="section-title__icon" src="assets/images/icons/star.svg">Our <strong>Features</strong></h2>
       <div class="row row--gutters-large generic-content-container">
@@ -117,7 +117,7 @@
  </div>
  </div>
 
-  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testmonial">
+  <div id="testimonial" class="page-section page-section--no-b-padding-until-large page-section--testmonial" data-matching-link="#about-katbin-link">
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section-title section-title--blue"><img class="section-title__icon" src="assets/images/icons/comment.svg"><strong>Real Testimonials</strong></h2>
       <div class="row row--gutters row--t-padding row--equal-heigh-at-large row--gutter-small generic-content-container">
