@@ -2,6 +2,7 @@ import '../styles/styles.css'; //webpack understand only javascript
 import MobileMenu from './modules/katbinMobileNav';
 import RevealOnScroll from './modules/katbinScrolling';
 import StickingHeader from './modules/sticking-head';
+import 'lazysizes';
 
 
 new StickingHeader();
