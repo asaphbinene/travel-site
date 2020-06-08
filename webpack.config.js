@@ -29,7 +29,7 @@ class RunAfterCompile{
 
 katbinCssConfig = {
     test: /\.css$/i,
-    use: ['css-loader', {loader: 'postcss-loader', options:{plugins: katbinPCssPlgins}}]
+    use: ['css-loader?url=false', {loader: 'postcss-loader', options: {plugins: katbinPCssPlgins}}]
 }
 
 let pages = fse.readdirSync('./app').filter(function(file){
@@ -46,7 +46,18 @@ let config = {
     plugins: pages,
     module: {
         rules: [
-            katbinCssConfig
+            katbinCssConfig,
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react', '@babel/preset-env']
+                    }
+                }
+            }
+
         ]
     }
 }
@@ -75,16 +86,6 @@ if (currentTask == 'dev'){
 }
 
 if (currentTask == 'build'){
-    config.module.rules.push({
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env']
-            }     
-        }
-    })
     katbinCssConfig.use.unshift(katbinMiniCssExtraPlgin.loader)
     katbinPCssPlgins.push(require('cssnano'))
     config.output= {
