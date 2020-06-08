@@ -1,10 +1,22 @@
 import '../styles/styles.css'; //webpack understand only javascript
+import 'lazysizes';
 import MobileMenu from './modules/katbinMobileNav';
 import RevealOnScroll from './modules/katbinScrolling';
 import StickingHeader from './modules/sticking-head';
-import 'lazysizes';
 
+// React Related code here
+import React from 'react'
+import ReactDOM from 'react-dom'
+ReactDOM.render(<MyAmazingComponent />, document.querySelector("#my-react-example"))
 
+function MyAmazingComponent(){
+   return(
+       <div>
+           <h1>This is My Amazing React Component</h1>
+           <p>React is great, the sky is blue, grass is green.</p>
+       </div>
+   ) 
+}
 new StickingHeader();
 new RevealOnScroll(document.querySelectorAll(".feature-item", 75));
 new RevealOnScroll(document.querySelectorAll(".testmonial", 60));

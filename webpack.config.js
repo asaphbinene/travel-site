@@ -27,7 +27,7 @@ class RunAfterCompile{
     }
 }
 
-katbinCssConfig = {
+let katbinCssConfig = {
     test: /\.css$/i,
     use: ['css-loader?url=false', {loader: 'postcss-loader', options: {plugins: katbinPCssPlgins}}]
 }
