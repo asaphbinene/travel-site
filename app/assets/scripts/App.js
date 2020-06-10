@@ -7,16 +7,10 @@ import StickingHeader from './modules/sticking-head';
 // React Related code here
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import MyAmazingComponent from './modules/MyAmazingComponent'
 ReactDOM.render(<MyAmazingComponent />, document.querySelector("#my-react-example"))
 
-function MyAmazingComponent(){
-   return(
-       <div>
-           <h1>This is My Amazing React Component</h1>
-           <p>React is great, the sky is blue, grass is green.</p>
-       </div>
-   ) 
-}
 new StickingHeader();
 new RevealOnScroll(document.querySelectorAll(".feature-item", 75));
 new RevealOnScroll(document.querySelectorAll(".testmonial", 60));
